@@ -1,0 +1,58 @@
+@import 'variables';
+//@import 'fonts';
+
+header {
+  background-color: white;
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 130px;
+  }
+
+  nav {
+    display: flex;
+    gap: 50px;
+
+    @media (min-width: 901px) and (max-width: 1440px) {
+      gap: 40px;
+    }
+  }
+
+  .nav-link {
+    font-family: $secondary-font;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.03em;
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 900px) {
+  header img {
+    width: 80px;
+  }
+
+  header .container {
+    height: 80px;
+  }
+
+  header nav {
+    position: absolute;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    right: 0;
+    top: 80px;
+    z-index: 5;
+    gap: 20px;
+    transform: translateX(100%);
+    transition: transform .3s ease-in-out;
+    
+    &.visible {
+      transform: translateX(0);
+    }
+  }
+}

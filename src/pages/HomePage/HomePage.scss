@@ -1,0 +1,85 @@
+.about-section {
+  margin-top: 120px;
+}
+
+.catalog-section {
+  margin-top: 190px;
+
+  .categories-grid {
+    padding: 0 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 103px 35px;
+    grid-auto-rows: 49.01vw;
+  }
+
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &.wide {
+      grid-column: span 2;
+    }
+
+    &.aligned-to-bottom {
+      align-self: end;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.carousel-container {
+  display: flex;
+}
+
+.carousel-controls {
+  width: 300px;
+  flex-shrink: 0;
+  background-color: antiquewhite;
+  border: 1px solid black;
+  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  button {
+    font-size: 28px;
+    padding: 0 10px;
+    height: 60px;
+  }
+}
+
+.carousel-wrapper {
+  display: flex;
+  gap: 15px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  width: 350px;
+  height: 450px;
+  border: 1px solid black;
+
+  &:first-child {
+    margin-left: 0;
+    transition: margin-left .4s ease-in-out;
+  }
+}
+
+@media (max-width: 900px) {
+  .catalog-section .categories-grid {
+    display: flex;
+    overflow: auto;
+  }
+
+  .catalog-section img {
+    height: 350px;
+    width: 65.6vw;
+    object-fit: cover;
+  }
+}

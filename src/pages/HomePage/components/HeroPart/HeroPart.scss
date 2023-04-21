@@ -1,0 +1,84 @@
+.hero-section {
+  position: relative;
+
+  .container {
+    padding-top: 100px;
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 117px;
+    letter-spacing: 0.03em;
+  }
+
+  .hero-section-bottom {
+    width: 1150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 495px;
+  }
+
+  .hero-section-bottom-label {
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.03em;
+  }
+
+  .hero-background-container {
+    position: absolute;
+    top: 363px;
+    padding: 0 35px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 621px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1650px) {
+  .hero-section .container {
+    padding-top: 70px;
+  }
+
+  .hero-section h1 {
+    font-size: 90px;
+    line-height: 105px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  .hero-section .container {
+    padding-top: 40px;
+  }
+
+  .hero-section h1 {
+    font-size: 80px;
+    line-height: 94px;
+  }
+
+  .hero-section .hero-section-bottom {
+    margin-top: 376px;
+    width: 895px;
+  }
+
+  .hero-section .hero-section-bottom-label {
+    font-size: 35px;
+    line-height: 41px;
+  }
+
+  .hero-section .hero-background-container {
+    top: 168px;
+  }
+
+  .hero-section .hero-image {
+    height: 563px;
+  }
+}

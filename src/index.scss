@@ -1,0 +1,44 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $background-color;
+  font-family: $main-font;
+}
+
+.container {
+  max-width: 1540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.common-section-header {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 0.03em;
+  font-family: $secondary-font;
+}
+
+@media (min-width: 901px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1650px) {
+  .container {
+    max-width: 1370px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+}
