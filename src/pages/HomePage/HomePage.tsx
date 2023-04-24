@@ -1,7 +1,54 @@
 import "./HomePage.scss";
+import { CategoriesGridItem } from "./components/CategoriesGridItem/CategoriesGridItem";
 import { HeroPart } from "./components/HeroPart/HeroPart";
+import GridItem1 from './assets/grid-item1.png';
+import GridItem2 from './assets/grid-item2.png';
+import GridItem3 from './assets/grid-item3.png';
+import GridItem4 from './assets/grid-item4.png';
+import GridItem5 from './assets/grid-item5.png';
+import GridItem6 from './assets/grid-item6.png';
+import GridItem7 from './assets/grid-item7.png';
 
 export const HomePage = () => {
+  const categories = [
+    {
+      imageSrc: GridItem1,
+      linkTitle: 'СНОУБОРДЫ',
+      isWide: true,
+      isAlignedToBottom: false,
+    }, {
+      imageSrc: GridItem2,
+      linkTitle: 'СНОУБОРДЫ',
+      isWide: false,
+      isAlignedToBottom: true,
+    }, {
+      imageSrc: GridItem3,
+      linkTitle: 'СНОУБОРДЫ',
+      isWide: false,
+      isAlignedToBottom: true,
+    }, {
+      imageSrc: GridItem4,
+      linkTitle: 'СНОУБОРДЫ',
+      isWide: true,
+      isAlignedToBottom: false,
+    }, {
+      imageSrc: GridItem5,
+      linkTitle: 'СНОУБОРДЫ',
+      isWide: false,
+      isAlignedToBottom: false,
+    }, {
+      imageSrc: GridItem6,
+      linkTitle: 'СНОУБОРДЫ',
+      isWide: false,
+      isAlignedToBottom: false,
+    }, {
+      imageSrc: GridItem7,
+      linkTitle: 'СНОУБОРДЫ',
+      isWide: false,
+      isAlignedToBottom: false,
+    },
+  ];
+
   return (
     <>
       <HeroPart />
@@ -10,39 +57,37 @@ export const HomePage = () => {
           <h2 className="common-section-header">О НАС</h2>
         </div>
       </section>
+      <h2>new version</h2>      
       <section className="catalog-section">
         <div className="container">
           <h2 className="common-section-header">КАТАЛОГ</h2>
         </div>
         <div className="categories-grid">
-          <div className="grid-item wide">
-            <img src="./assets/grid-item1.png" alt="" />
-            <a href="">СНОУБОРДЫ</a>
-          </div>
-          <div className="grid-item aligned-to-bottom">
-            <img src="./assets/grid-item2.png" alt="" />
-            <a href="">КРЕПЛЕНИЯ</a>
-          </div>
-          <div className="grid-item aligned-to-bottom">
-            <img src="./assets/grid-item3.png" alt="" />
-            <a href="">БОТИНКИ</a>
-          </div>
-          <div className="grid-item wide">
-            <img src="./assets/grid-item4.png" alt="" />
-            <a href="">ОДЕЖДА</a>
-          </div>
-          <div className="grid-item">
-            <img src="./assets/grid-item5.png" alt="" />
-            <a href="">МАСКИ</a>
-          </div>
-          <div className="grid-item">
-            <img src="./assets/grid-item6.png" alt="" />
-            <a href="">ШЛЕМЫ И ЗАЩИТА</a>
-          </div>
-          <div className="grid-item">
-            <img src="./assets/grid-item7.png" alt="" />
-            <a href="">АКСЕССУАРЫ</a>
-          </div>
+          {
+            categories.map(category =>
+              <CategoriesGridItem
+                key={`category-${category.imageSrc}`}
+                imageSrc={category.imageSrc}
+                linkTitle={category.linkTitle}
+                isWide={category.isWide}
+                isAlignedToBottom={category.isAlignedToBottom} />
+            )
+          }
+        </div>
+      </section>
+      <h2>old version</h2>
+      <section className="catalog-section">
+        <div className="container">
+          <h2 className="common-section-header">КАТАЛОГ</h2>
+        </div>
+        <div className="categories-grid">
+          <CategoriesGridItem imageSrc={GridItem1} linkTitle="СНОУБОРДЫ" isWide={true} isAlignedToBottom={false} />
+          <CategoriesGridItem imageSrc={GridItem2} linkTitle="КРЕПЛЕНИЯ" isWide={false} isAlignedToBottom={true} />
+          <CategoriesGridItem imageSrc={GridItem3} linkTitle="БОТИНКИ" isWide={false} isAlignedToBottom={true} />
+          <CategoriesGridItem imageSrc={GridItem4} linkTitle="ОДЕЖДА" isWide={true} isAlignedToBottom={false} />
+          <CategoriesGridItem imageSrc={GridItem5} linkTitle="МАСКИ" isWide={false} isAlignedToBottom={false} />
+          <CategoriesGridItem imageSrc={GridItem6} linkTitle="ШЛЕМЫ И ЗАЩИТА" isWide={false} isAlignedToBottom={false} />
+          <CategoriesGridItem imageSrc={GridItem7} linkTitle="АКСЕССУАРЫ" isWide={false} isAlignedToBottom={false} />
         </div>
       </section>
       <section className="carousel-container">

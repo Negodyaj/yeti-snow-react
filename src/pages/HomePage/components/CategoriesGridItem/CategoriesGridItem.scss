@@ -1,0 +1,28 @@
+.catalog-section {
+
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &.wide {
+      grid-column: span 2;
+    }
+
+    &.aligned-to-bottom {
+      align-self: end;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .catalog-section img {
+    height: 350px;
+    width: 65.6vw;
+    object-fit: cover;
+  }
+}

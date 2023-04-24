@@ -12,24 +12,6 @@
     gap: 103px 35px;
     grid-auto-rows: 49.01vw;
   }
-
-  .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-
-    &.wide {
-      grid-column: span 2;
-    }
-
-    &.aligned-to-bottom {
-      align-self: end;
-    }
-  }
-
-  img {
-    width: 100%;
-  }
 }
 
 .carousel-container {
@@ -75,11 +57,5 @@
   .catalog-section .categories-grid {
     display: flex;
     overflow: auto;
-  }
-
-  .catalog-section img {
-    height: 350px;
-    width: 65.6vw;
-    object-fit: cover;
   }
 }
