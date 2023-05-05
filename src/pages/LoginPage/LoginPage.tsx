@@ -1,9 +1,8 @@
-interface LoginPageProps {
-  setUserData: (name: string, status: string) => void;
-}
+import { useDispatch } from "react-redux";
+import { loadUser } from "../../shared/UserWidget/userWidget.slice";
 
-export const LoginPage = (props: LoginPageProps) => {
-  const { setUserData } = props;
+export const LoginPage = () => {
+  const dispatch = useDispatch();
 
   const onLogInButtonClick = () => {
     // sending request
@@ -12,10 +11,15 @@ export const LoginPage = (props: LoginPageProps) => {
       id: 14,
       name: 'John Doe',
       email: 'john.doe@mail.com',
-      status: 'VIP',
+      status: 'Regular',
     };
 
-    setUserData(user.name, user.status);
+    const payload = {
+      name: user.name,
+      status: user.status,
+    };
+
+    dispatch(loadUser(payload));
   };
 
   return (

@@ -1,16 +1,14 @@
-interface UserWidgetProps {
-  avatarLink: string;
-  name: string;
-  status: string;
-}
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
 
-export const UserWidget = (props: UserWidgetProps) => {
-  const { avatarLink, name, status } = props;
+export const UserWidget = () => {
+  const userWidgetState = useSelector((state: RootState) => state.userWidget);
+  
   return (
     <div className="user-widget">
-      <img src={avatarLink} alt="Avatar" />
-      <div className="user-name">{name}</div>
-      <div className="user-status">{status}</div>
+      <img src={userWidgetState.avatarLink} alt="Avatar" />
+      <div className="user-name">{userWidgetState.name}</div>
+      <div className="user-status">{userWidgetState.status}</div>
     </div>
   );
 }

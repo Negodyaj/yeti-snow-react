@@ -8,22 +8,14 @@ import { LoginPage } from './pages/LoginPage/LoginPage';
 import { RegisterPage } from './pages/RegisterPage/RegisterPage';
 
 function App() {
-  const [userName, setUserName] = useState('');
-  const [userStatus, setUserStatus] = useState('');
-
-  const setUserInfo = (name: string, status: string) => {
-    setUserName(name);
-    setUserStatus(status);
-  }
-
   return (
     <>
-      <Header userName={userName} userStatus={userStatus} />
+      <Header />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="catalog" element={<CatalogPage />} />
-          <Route path="login" element={<LoginPage setUserData={setUserInfo} />} />
+          <Route path="login" element={<LoginPage />} />
           <Route path="register" element={<RegisterPage />} />
         </Routes>
       </main>
