@@ -1,4 +1,4 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 interface UserWidgetState {
   avatarLink: string;
@@ -10,7 +10,7 @@ const initialState: UserWidgetState = {
   avatarLink: '',
   name: '',
   status: '',
-}
+};
 
 interface LoadUserPayload {
   name: string;

@@ -1,6 +1,6 @@
-import "./HeroPart.scss";
-import heroBack from "./hero-back.png";
-import heroBackMobile from "./hero-back-mobile.png";
+import './HeroPart.scss';
+import heroBack from './hero-back.png';
+import heroBackMobile from './hero-back-mobile.png';
 
 export const HeroPart = () => {
   return (
@@ -19,13 +19,13 @@ export const HeroPart = () => {
             <br />
             КОЛЛЕКЦИЯ
           </div>
-          <a href="">ЗА ПОКУПКАМИ</a>
+          <a href="/">ЗА ПОКУПКАМИ</a>
         </div>
       </div>
       <div className="hero-background-container">
         <picture>
           <source media="(max-width: 900px)" srcSet={heroBackMobile} />
-          <img src={heroBack} alt="Hero image" className="hero-image" />
+          <img src={heroBack} alt="Hero" className="hero-image" />
         </picture>
       </div>
     </section>

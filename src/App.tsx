@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
 import './App.scss';
+import { CatalogPage } from './pages/CatalogPage/CatalogPage';
 import { Header } from './Header';
 import { HomePage } from './pages/HomePage/HomePage';
-import { Route, Routes } from 'react-router-dom';
-import { CatalogPage } from './pages/CatalogPage/CatalogPage';
 import { LoginPage } from './pages/LoginPage/LoginPage';
-import { RegisterPage } from './pages/RegisterPage/RegisterPage';
 import { ProductPage } from './pages/ProductPage/ProductPage';
+import { RegisterPage } from './pages/RegisterPage/RegisterPage';
+import { Route, Routes } from 'react-router-dom';
+import React from 'react';
 
 function App() {
   return (

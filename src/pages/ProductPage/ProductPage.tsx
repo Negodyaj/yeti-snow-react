@@ -1,13 +1,13 @@
-import "./ProductPage.scss";
-import React from "react";
-import helmet from "./assets/helmet.png";
-import { CustomSelect } from "../../shared/CustomSelect/CustomSelect";
+import './ProductPage.scss';
+import { CustomSelect } from '../../shared/CustomSelect/CustomSelect';
+import React from 'react';
+import helmet from './assets/helmet.png';
 
 export const ProductPage = () => {
   const options = [
-    { value: 1, label: "S" },
-    { value: 2, label: "M" },
-    { value: 3, label: "L" },
+    { value: 1, label: 'S' },
+    { value: 2, label: 'M' },
+    { value: 3, label: 'L' },
   ];
 
   return (

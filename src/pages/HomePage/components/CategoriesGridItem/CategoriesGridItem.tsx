@@ -19,7 +19,9 @@ export const CategoriesGridItem = (props: CategoriesGridItemProps) => {
   return (
     <div className={className}>
       <img src={imageSrc} alt="" />
-      <a href="" onClick={handleClick}>{linkTitle}</a>
+      <a href="/" onClick={handleClick}>
+        {linkTitle}
+      </a>
     </div>
   );
 };
