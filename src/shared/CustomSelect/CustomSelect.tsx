@@ -7,10 +7,11 @@ interface CustomSelectProps {
     label: string;
   }[];
   placeholder: string;
+  field?: any;
 }
 
 export const CustomSelect = (props: CustomSelectProps) => {
-  const { options, placeholder } = props;
+  const { options, placeholder, field } = props;
   const colorStyles: StylesConfig = {
     control: (styles, state: ControlProps) => ({
       ...styles,
@@ -51,5 +52,5 @@ export const CustomSelect = (props: CustomSelectProps) => {
     placeholder: (styles) => ({ ...styles, color: '#ff40009c' }),
   };
 
-  return <Select options={options} styles={colorStyles} isClearable placeholder={placeholder} />;
+  return <Select {...field} options={options} styles={colorStyles} isClearable placeholder={placeholder} />;
 };
