@@ -6,4 +6,25 @@
   .select-wrapper {
     width: 300px;
   }
+
+  .first-slider-wrapper {
+    .swiper {
+      padding: 0 50px;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: darkslategray;
+      opacity: .5;
+      width: 12px;
+      height: 12px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: orange;
+    }
+  }
+
+  .second-slider-wrapper .swiper {
+    padding-bottom: 40px;
+  }
 }

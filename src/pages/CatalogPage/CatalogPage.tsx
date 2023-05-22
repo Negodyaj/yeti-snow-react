@@ -100,7 +100,9 @@ export const CatalogPage = () => {
             </label>
             <div className="form-controls">
               <button type="submit">Apply filters</button>
-              <button type="button" onClick={() => reset()}>Clear</button>
+              <button type="button" onClick={() => reset()}>
+                Clear
+              </button>
             </div>
           </form>
         </div>
@@ -108,6 +110,7 @@ export const CatalogPage = () => {
           {state.filteredProduct.map((product) => (
             <ProductCard
               key={`product-${product.id}`}
+              id={product.id}
               title={product.title}
               imageColor={product.imageColor}
               colors={product.colors}
