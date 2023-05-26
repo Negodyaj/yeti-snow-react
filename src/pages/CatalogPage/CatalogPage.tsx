@@ -5,8 +5,10 @@ import { Controller, useForm } from 'react-hook-form';
 import { CustomSelect } from '../../shared/CustomSelect/CustomSelect';
 import { ProductCard } from '../../shared/ProductCard/ProductCard';
 import { RootState } from '../../store/store';
-import { filter } from './catalogPage.slice';
+import { baseUrl } from '../../shared/consts';
+import { filter, getProducts } from './catalogPage.slice';
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 const schema = yup
@@ -37,6 +39,14 @@ export const CatalogPage = () => {
   } = useForm<FormData>({
     resolver: yupResolver(schema),
   });
+
+  useEffect(() => {
+    fetch(`${baseUrl}/products`)
+      .then((response) => response.json())
+      .then((products) => {
+        dispatch(getProducts(products));
+      });
+  }, []);
 
   const sizeOptions = [
     { value: 1, label: 'XS' },
