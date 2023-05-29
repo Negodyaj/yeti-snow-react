@@ -26,6 +26,45 @@ body {
   font-family: $secondary-font;
 }
 
+form {
+  font-size: 26px;
+
+  label ~ label {
+    margin-top: 12px;
+    display: block;
+  }
+
+  input {
+    font-size: 18px;
+    padding: 4px 8px;
+  }
+
+  .validation-error {
+    color: tomato;
+    font-size: 22px;
+  }
+
+  .form-group {
+    display: flex;
+    gap: 6px;
+
+    input {
+      width: 30%;
+    }
+  }
+
+  .form-controls {
+    display: flex;
+    gap: 15px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+
 @media (min-width: 901px) {
   .mobile-only {
     display: none !important;
